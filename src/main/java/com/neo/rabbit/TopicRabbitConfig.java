@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-@Configuration
+//@Configuration
 public class TopicRabbitConfig {
 
     private static AtomicInteger successsAcks = new AtomicInteger(0);

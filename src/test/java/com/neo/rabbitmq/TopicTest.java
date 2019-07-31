@@ -41,23 +41,27 @@ public class TopicTest {
         }
     }*/
 
-
-    @Test
-    public void topic_MQLimitedQue_test() {
-        for (int i = 1; i < 20; i++) {
-            String context = "hi, this is limited que message:" + i;
-            sender.sendLimited(context);
-        }
-    }
-
+   /*
     @Test
     public void topic() throws Exception {
-        for (int i = 1; i < 50000; i++) {
+        *//*for (int i = 1; i < 50000; i++) {
             sender.send();
-        }
-//        sender.send();
+        }*//*
+        sender.send();
 
+    }*/
+
+
+    @Test
+    public void topic_MQLimitedQue_test() throws InterruptedException {
+        for (int i = 1; i < 10; i++) {
+            String context = "hi, this is limited que message:" + i;
+            sender.sendLimited(context);
+
+        }
+        Thread.sleep(20000L);
     }
+
 
 
 }
