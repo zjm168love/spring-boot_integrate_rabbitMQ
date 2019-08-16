@@ -54,14 +54,23 @@ public class TopicTest {
 
     @Test
     public void topic_MQLimitedQue_test() throws InterruptedException {
-        for (int i = 1; i < 10; i++) {
+       /* for (int i = 1; i < 40000; i++) {
             String context = "hi, this is limited que message:" + i;
             sender.sendLimited(context);
 
         }
-        Thread.sleep(20000L);
+        Thread.sleep(20000L);*/
+        String context = "hi, this is limited que message:";
+        sender.sendLimited(context);
+
     }
 
+
+    @Test
+    public void topic_opration_test() throws InterruptedException {
+        sender.sendOperation();
+        Thread.sleep(20000L);
+    }
 
 
 }
